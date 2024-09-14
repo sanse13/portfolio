@@ -8,6 +8,13 @@
   </div>
   <div class="mt-5">
     <h3 class="text-xl font-semibold">Bio</h3>
-    <p class="text-gray-600 mt-2">Adri is a software engineer with over 3 years of experience in developing web and mobile applications. He is skilled in Javascript, Typescript, Angular and Node.js.</p>
+    <span class="text-gray-600 mt-2 inline-block">
+      @for (word of displayedTextArray; track $index) {
+        <p [style.opacity]="$index <= indexToShow ? 1 : 0"  class="inline-block transition-opacity duration-300">
+          {{ word }}&nbsp; 
+        </p>
+      }
+      
+    </span>
   </div>
 </div>
