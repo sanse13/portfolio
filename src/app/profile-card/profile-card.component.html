@@ -20,15 +20,11 @@
   </div>
   <div class="mt-5">
     <h3 class="text-xl font-semibold">Bio</h3>
-    <span class="text-gray-600 mt-2 inline-block">
-      @for (word of displayedTextArray; track $index) {
-        <p
-          [style.opacity]="$index <= indexToShow ? 1 : 0"
-          class="inline-block transition-opacity duration-300"
-        >
-          {{ word }}&nbsp;
-        </p>
-      }
+    <span
+      appTextTransition
+      [text]="bioText"
+      class="text-gray-600 mt-2 typewriter"
+    >
     </span>
   </div>
 </div>

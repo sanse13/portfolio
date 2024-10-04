@@ -17,3 +17,34 @@ html {
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.typewriter {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.finished::after {
+  content: none;
+}
